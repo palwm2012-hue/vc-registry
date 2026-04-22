@@ -109,6 +109,23 @@
           "target": "$ui/s-side-menu.tsx"
         }
       ]
+    },
+    {
+      "name": "s-top-menu",
+      "type": "registry:ui",
+      "title": "STopMenu",
+      "description": "Top navigation bar with logo, search, menu tabs, operations and avatar slots.",
+      "registryDependencies": [
+        "@vc/volcengine-theme"
+      ],
+      "docs": "STopMenu provides a Volcengine-style top navigation bar. Also exports SSubTopMenu for secondary navigation.",
+      "files": [
+        {
+          "path": "registry/base-nova/s-top-menu/s-top-menu.tsx",
+          "type": "registry:component",
+          "target": "$ui/s-top-menu.tsx"
+        }
+      ]
     }
   ]
 }
