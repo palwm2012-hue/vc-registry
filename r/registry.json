@@ -1,0 +1,114 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "vc",
+  "homepage": "https://public-blush-eight-69.vercel.app",
+  "items": [
+    {
+      "name": "volcengine-theme",
+      "type": "registry:file",
+      "title": "Volcengine Theme",
+      "description": "Volcengine UI V3 CSS variables for vc components.",
+      "docs": "After installation, import the generated file in your app entry, for example: import \"@/lib/volcengine-theme.css\".",
+      "files": [
+        {
+          "path": "registry/base-nova/volcengine-theme/volcengine-theme.css",
+          "type": "registry:file",
+          "target": "$lib/volcengine-theme.css"
+        }
+      ]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:ui",
+      "title": "Pagination",
+      "description": "Pagination component with Volcengine Arco design tokens.",
+      "registryDependencies": [
+        "@vc/volcengine-theme"
+      ],
+      "docs": "Provides page navigation controls styled with Arco design tokens.",
+      "files": [
+        {
+          "path": "registry/base-nova/pagination/pagination.tsx",
+          "type": "registry:component",
+          "target": "$ui/pagination.tsx"
+        }
+      ]
+    },
+    {
+      "name": "s-table",
+      "type": "registry:ui",
+      "title": "STable",
+      "description": "Editable table component based on Volcengine Arco design tokens.",
+      "registryDependencies": [
+        "@vc/volcengine-theme",
+        "@vc/pagination"
+      ],
+      "docs": "STable requires the Volcengine theme file. If styles look missing, import \"@/lib/volcengine-theme.css\" in your app entry.",
+      "files": [
+        {
+          "path": "registry/base-nova/s-table/s-table.tsx",
+          "type": "registry:component",
+          "target": "$ui/s-table.tsx"
+        }
+      ]
+    },
+    {
+      "name": "s-action-group",
+      "type": "registry:ui",
+      "title": "SActionGroup",
+      "description": "Action button group with overflow dropdown menu.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "@vc/volcengine-theme"
+      ],
+      "docs": "Requires button and dropdown-menu components in your ui directory.",
+      "files": [
+        {
+          "path": "registry/base-nova/s-action-group/s-action-group.tsx",
+          "type": "registry:component",
+          "target": "$ui/s-action-group.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "Tooltip component based on @base-ui/react with Volcengine Arco design tokens.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "@vc/volcengine-theme"
+      ],
+      "docs": "Provides tooltip functionality using @base-ui/react primitives.",
+      "files": [
+        {
+          "path": "registry/base-nova/tooltip/tooltip.tsx",
+          "type": "registry:component",
+          "target": "$ui/tooltip.tsx"
+        }
+      ]
+    },
+    {
+      "name": "s-side-menu",
+      "type": "registry:ui",
+      "title": "SSideMenu",
+      "description": "Collapsible side navigation menu with search, overview and multi-level support.",
+      "registryDependencies": [
+        "@vc/volcengine-theme",
+        "@vc/tooltip"
+      ],
+      "docs": "SSideMenu provides a Volcengine-style sidebar navigation with collapse, search and tooltip support.",
+      "files": [
+        {
+          "path": "registry/base-nova/s-side-menu/s-side-menu.tsx",
+          "type": "registry:component",
+          "target": "$ui/s-side-menu.tsx"
+        }
+      ]
+    }
+  ]
+}
